@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		C614D8B51AEBD336003523DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C614D8B41AEBD336003523DE /* main.m */; };
 		C614D8B81AEBD336003523DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C614D8B71AEBD336003523DE /* AppDelegate.m */; };
-		C614D8BB1AEBD336003523DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C614D8BA1AEBD336003523DE /* ViewController.m */; };
 		C614D8BE1AEBD336003523DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C614D8BC1AEBD336003523DE /* Main.storyboard */; };
 		C614D8C01AEBD336003523DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C614D8BF1AEBD336003523DE /* Images.xcassets */; };
 		C614D8C31AEBD336003523DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C614D8C11AEBD336003523DE /* LaunchScreen.xib */; };
 		C614D8CF1AEBD336003523DE /* JMHTeamCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C614D8CE1AEBD336003523DE /* JMHTeamCTests.m */; };
+		C614D8E61AEBE093003523DE /* JMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C614D8E51AEBE093003523DE /* JMSettingsViewController.m */; };
+		C614D8E91AEBE0A8003523DE /* JMMonitoringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C614D8E81AEBE0A8003523DE /* JMMonitoringViewController.m */; };
+		C614D8EB1AEBE7B1003523DE /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C614D8EA1AEBE7B1003523DE /* CoreBluetooth.framework */; };
+		C614D8EF1AEBE81A003523DE /* MEMELib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C614D8EE1AEBE81A003523DE /* MEMELib.framework */; };
+		C614D8F11AEBE88E003523DE /* MEMELib.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C614D8EE1AEBE81A003523DE /* MEMELib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,20 +30,37 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C614D8F01AEBE87B003523DE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C614D8F11AEBE88E003523DE /* MEMELib.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C614D8AF1AEBD336003523DE /* JMHTeamC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMHTeamC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C614D8B31AEBD336003523DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C614D8B41AEBD336003523DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C614D8B61AEBD336003523DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C614D8B71AEBD336003523DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C614D8B91AEBD336003523DE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C614D8BA1AEBD336003523DE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C614D8BD1AEBD336003523DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C614D8BF1AEBD336003523DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C614D8C21AEBD336003523DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C614D8C81AEBD336003523DE /* JMHTeamCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMHTeamCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C614D8CD1AEBD336003523DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C614D8CE1AEBD336003523DE /* JMHTeamCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMHTeamCTests.m; sourceTree = "<group>"; };
+		C614D8E41AEBE093003523DE /* JMSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSettingsViewController.h; sourceTree = "<group>"; };
+		C614D8E51AEBE093003523DE /* JMSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSettingsViewController.m; sourceTree = "<group>"; };
+		C614D8E71AEBE0A8003523DE /* JMMonitoringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMMonitoringViewController.h; sourceTree = "<group>"; };
+		C614D8E81AEBE0A8003523DE /* JMMonitoringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMMonitoringViewController.m; sourceTree = "<group>"; };
+		C614D8EA1AEBE7B1003523DE /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		C614D8EE1AEBE81A003523DE /* MEMELib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MEMELib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C614D8EF1AEBE81A003523DE /* MEMELib.framework in Frameworks */,
+				C614D8EB1AEBE7B1003523DE /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,8 @@
 		C614D8A61AEBD336003523DE = {
 			isa = PBXGroup;
 			children = (
+				C614D8EE1AEBE81A003523DE /* MEMELib.framework */,
+				C614D8EA1AEBE7B1003523DE /* CoreBluetooth.framework */,
 				C614D8B11AEBD336003523DE /* JMHTeamC */,
 				C614D8CB1AEBD336003523DE /* JMHTeamCTests */,
 				C614D8B01AEBD336003523DE /* Products */,
@@ -83,8 +108,10 @@
 			children = (
 				C614D8B61AEBD336003523DE /* AppDelegate.h */,
 				C614D8B71AEBD336003523DE /* AppDelegate.m */,
-				C614D8B91AEBD336003523DE /* ViewController.h */,
-				C614D8BA1AEBD336003523DE /* ViewController.m */,
+				C614D8E41AEBE093003523DE /* JMSettingsViewController.h */,
+				C614D8E51AEBE093003523DE /* JMSettingsViewController.m */,
+				C614D8E71AEBE0A8003523DE /* JMMonitoringViewController.h */,
+				C614D8E81AEBE0A8003523DE /* JMMonitoringViewController.m */,
 				C614D8BC1AEBD336003523DE /* Main.storyboard */,
 				C614D8BF1AEBD336003523DE /* Images.xcassets */,
 				C614D8C11AEBD336003523DE /* LaunchScreen.xib */,
@@ -129,6 +156,7 @@
 				C614D8AB1AEBD336003523DE /* Sources */,
 				C614D8AC1AEBD336003523DE /* Frameworks */,
 				C614D8AD1AEBD336003523DE /* Resources */,
+				C614D8F01AEBE87B003523DE /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -219,7 +247,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C614D8BB1AEBD336003523DE /* ViewController.m in Sources */,
+				C614D8E61AEBE093003523DE /* JMSettingsViewController.m in Sources */,
+				C614D8E91AEBE0A8003523DE /* JMMonitoringViewController.m in Sources */,
 				C614D8B81AEBD336003523DE /* AppDelegate.m in Sources */,
 				C614D8B51AEBD336003523DE /* main.m in Sources */,
 			);
@@ -347,7 +376,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/shoya/Dropbox/Mac/@local_harricane/dev/iOS/B.1.0.0",
+				);
 				INFOPLIST_FILE = JMHTeamC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -357,7 +392,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/shoya/Dropbox/Mac/@local_harricane/dev/iOS/B.1.0.0",
+				);
 				INFOPLIST_FILE = JMHTeamC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +457,7 @@
 				C614D8D41AEBD336003523DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C614D8D51AEBD336003523DE /* Build configuration list for PBXNativeTarget "JMHTeamCTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +466,7 @@
 				C614D8D71AEBD336003523DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
