@@ -11,6 +11,6 @@
 
 @interface JMMonitoringViewController : UIViewController
 
-- (void) memeRealTimeModeDataReceived: (MEMERealTimeData *)data;
+- (void)memeRealTimeModeDataReceived: (MEMERealTimeData *)data;
 
 @end

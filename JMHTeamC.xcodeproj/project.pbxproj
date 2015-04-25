@@ -18,6 +18,8 @@
 		C614D8EB1AEBE7B1003523DE /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C614D8EA1AEBE7B1003523DE /* CoreBluetooth.framework */; };
 		C614D8EF1AEBE81A003523DE /* MEMELib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C614D8EE1AEBE81A003523DE /* MEMELib.framework */; };
 		C614D8F11AEBE88E003523DE /* MEMELib.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C614D8EE1AEBE81A003523DE /* MEMELib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C614D8F71AEBF8FE003523DE /* hakusyu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C614D8F61AEBF8FE003523DE /* hakusyu.mp3 */; };
+		C614D8F91AEBFB86003523DE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C614D8F81AEBFB86003523DE /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		C614D8E81AEBE0A8003523DE /* JMMonitoringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMMonitoringViewController.m; sourceTree = "<group>"; };
 		C614D8EA1AEBE7B1003523DE /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		C614D8EE1AEBE81A003523DE /* MEMELib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MEMELib.framework; sourceTree = "<group>"; };
+		C614D8F61AEBF8FE003523DE /* hakusyu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hakusyu.mp3; sourceTree = "<group>"; };
+		C614D8F81AEBFB86003523DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C614D8F91AEBFB86003523DE /* AudioToolbox.framework in Frameworks */,
 				C614D8EF1AEBE81A003523DE /* MEMELib.framework in Frameworks */,
 				C614D8EB1AEBE7B1003523DE /* CoreBluetooth.framework in Frameworks */,
 			);
@@ -86,6 +91,7 @@
 		C614D8A61AEBD336003523DE = {
 			isa = PBXGroup;
 			children = (
+				C614D8F81AEBFB86003523DE /* AudioToolbox.framework */,
 				C614D8EE1AEBE81A003523DE /* MEMELib.framework */,
 				C614D8EA1AEBE7B1003523DE /* CoreBluetooth.framework */,
 				C614D8B11AEBD336003523DE /* JMHTeamC */,
@@ -115,6 +121,7 @@
 				C614D8BC1AEBD336003523DE /* Main.storyboard */,
 				C614D8BF1AEBD336003523DE /* Images.xcassets */,
 				C614D8C11AEBD336003523DE /* LaunchScreen.xib */,
+				C614D8F51AEBF8D3003523DE /* Resources */,
 				C614D8B21AEBD336003523DE /* Supporting Files */,
 			);
 			path = JMHTeamC;
@@ -144,6 +151,14 @@
 				C614D8CD1AEBD336003523DE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C614D8F51AEBF8D3003523DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C614D8F61AEBF8FE003523DE /* hakusyu.mp3 */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +245,7 @@
 				C614D8BE1AEBD336003523DE /* Main.storyboard in Resources */,
 				C614D8C31AEBD336003523DE /* LaunchScreen.xib in Resources */,
 				C614D8C01AEBD336003523DE /* Images.xcassets in Resources */,
+				C614D8F71AEBF8FE003523DE /* hakusyu.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

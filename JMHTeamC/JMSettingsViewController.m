@@ -31,17 +31,12 @@
     [[MEMELib sharedInstance] disconnectPeripheral];
 }
 
-- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     
 }
 
-- (IBAction)scanButtonPressed:(id)sender {
-    MEMEStatus status = [[MEMELib sharedInstance] startScanningPeripherals];
-    [self checkMEMEStatus: status];
-}
-
-- (void) checkMEMEStatus: (MEMEStatus) status
+- (void)checkMEMEStatus: (MEMEStatus) status
 {
     if (status == MEME_ERROR_APP_AUTH){
         [[[UIAlertView alloc] initWithTitle: @"App Auth Failed" message: @"Invalid Application ID or Client Secret " delegate: nil cancelButtonTitle: nil otherButtonTitles: @"OK", nil] show];
@@ -52,16 +47,21 @@
     }
 }
 
-#pragma mark MEMELib Delegates
+- (IBAction)scanButtonPressed:(id)sender {
+    MEMEStatus status = [[MEMELib sharedInstance] startScanningPeripherals];
+    [self checkMEMEStatus: status];
+}
 
-- (void) memePeripheralFound: (CBPeripheral *) peripheral;
+#pragma mark - MEMELib Delegates
+
+- (void)memePeripheralFound: (CBPeripheral *) peripheral;
 {
     [_peripheralsFound addObject: peripheral];
     NSLog(@"peripheral found %@", [peripheral.identifier UUIDString]);
     [self.peripheralListTableView reloadData];
 }
 
-- (void) memePeripheralConnected: (CBPeripheral *)peripheral
+- (void)memePeripheralConnected: (CBPeripheral *)peripheral
 {
     NSLog(@"MEME Device Connected!");
     [[MEMELib sharedInstance] changeDataMode: MEME_COM_REALTIME];
@@ -69,33 +69,32 @@
     [self.navigationController pushViewController:_monitoringVC animated:YES];
 }
 
-- (void) memePeripheralDisconnected: (CBPeripheral *)peripheral
+- (void)memePeripheralDisconnected: (CBPeripheral *)peripheral
 {
     NSLog(@"MEME Device Disconnected");
 }
 
-- (void) memeStandardModeDataReceived: (MEMEStandardData *) data
+- (void)memeStandardModeDataReceived: (MEMEStandardData *) data
 {
     
 }
 
-
-- (void) memeRealTimeModeDataReceived: (MEMERealTimeData *) data
+- (void)memeRealTimeModeDataReceived: (MEMERealTimeData *) data
 {
     if (_monitoringVC) [_monitoringVC memeRealTimeModeDataReceived: data];
 }
 
-- (void) memeDataModeChanged:(MEMEDataMode)mode
+- (void)memeDataModeChanged:(MEMEDataMode)mode
 {
     
 }
 
-- (void) memeAppAuthorized:(MEMEStatus)status
+- (void)memeAppAuthorized:(MEMEStatus)status
 {
     [self checkMEMEStatus: status];
 }
 
-#pragma mark UITableViewControlelr Delegate
+#pragma mark - UITableViewControlelr Delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -117,7 +116,7 @@
     return cell;
 }
 
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CBPeripheral *peripheral = [_peripheralsFound objectAtIndex: indexPath.row];
     MEMEStatus status = [[MEMELib sharedInstance] connectPeripheral: peripheral ];
