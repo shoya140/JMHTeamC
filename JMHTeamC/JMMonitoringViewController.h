@@ -10,5 +10,6 @@
 #import "MEME.h"
 
 @interface JMMonitoringViewController : UIViewController<MEMEDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *debugLabel;
 
 @end

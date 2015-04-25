@@ -96,7 +96,6 @@
         <!--設定-->
         <scene sceneID="NY7-UX-fz3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sjf-UG-PzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="JMSettingsViewController" id="6G9-Qx-gjq" customClass="JMSettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="emG-tA-faP"/>
@@ -115,6 +114,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sjf-UG-PzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1294" y="1606"/>
         </scene>
@@ -129,8 +129,27 @@
                     <view key="view" contentMode="scaleToFill" id="gOi-9b-bDR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pitch: 0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6R-fw-DrY">
+                                <rect key="frame" x="250" y="122" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="N7E-Cf-czh"/>
+                                    <constraint firstAttribute="width" constant="100" id="aE5-C4-WPF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I6R-fw-DrY" firstAttribute="top" secondItem="jub-uj-QG9" secondAttribute="bottom" constant="102" id="LUM-b5-bhG"/>
+                            <constraint firstAttribute="centerX" secondItem="I6R-fw-DrY" secondAttribute="centerX" id="QKd-0o-6na"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="debugLabel" destination="I6R-fw-DrY" id="rI4-rF-CwH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzv-IF-3id" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
