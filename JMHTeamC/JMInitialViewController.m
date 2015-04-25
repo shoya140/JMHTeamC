@@ -44,6 +44,11 @@
 - (IBAction)startButtonWasPressed:(id)sender {
     [[MEME sharedManager] scanDevice];
     [SVProgressHUD showWithStatus:@"デバイスを検索中"];
+    NSTimer *resetTimer = [NSTimer scheduledTimerWithTimeInterval:10.0f target:self selector:@selector(resetScan:) userInfo:nil repeats:NO];
+}
+
+- (void)resetScan:(NSTimer *)timer{
+    [SVProgressHUD dismiss];
 }
 
 - (void)memeConnected{
