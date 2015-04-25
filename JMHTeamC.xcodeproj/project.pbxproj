@@ -13,13 +13,14 @@
 		C614D8C01AEBD336003523DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C614D8BF1AEBD336003523DE /* Images.xcassets */; };
 		C614D8C31AEBD336003523DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C614D8C11AEBD336003523DE /* LaunchScreen.xib */; };
 		C614D8CF1AEBD336003523DE /* JMHTeamCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C614D8CE1AEBD336003523DE /* JMHTeamCTests.m */; };
-		C614D8E61AEBE093003523DE /* JMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C614D8E51AEBE093003523DE /* JMSettingsViewController.m */; };
 		C614D8E91AEBE0A8003523DE /* JMMonitoringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C614D8E81AEBE0A8003523DE /* JMMonitoringViewController.m */; };
 		C614D8EB1AEBE7B1003523DE /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C614D8EA1AEBE7B1003523DE /* CoreBluetooth.framework */; };
 		C614D8EF1AEBE81A003523DE /* MEMELib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C614D8EE1AEBE81A003523DE /* MEMELib.framework */; };
 		C614D8F11AEBE88E003523DE /* MEMELib.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C614D8EE1AEBE81A003523DE /* MEMELib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C614D8F71AEBF8FE003523DE /* hakusyu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C614D8F61AEBF8FE003523DE /* hakusyu.mp3 */; };
 		C614D8F91AEBFB86003523DE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C614D8F81AEBFB86003523DE /* AudioToolbox.framework */; };
+		C614D8FC1AEC008F003523DE /* MEME.m in Sources */ = {isa = PBXBuildFile; fileRef = C614D8FB1AEC008F003523DE /* MEME.m */; };
+		C6BF132C1AEC0A4E006700D5 /* JMInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BF132B1AEC0A4E006700D5 /* JMInitialViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,14 +58,16 @@
 		C614D8C81AEBD336003523DE /* JMHTeamCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMHTeamCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C614D8CD1AEBD336003523DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C614D8CE1AEBD336003523DE /* JMHTeamCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMHTeamCTests.m; sourceTree = "<group>"; };
-		C614D8E41AEBE093003523DE /* JMSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSettingsViewController.h; sourceTree = "<group>"; };
-		C614D8E51AEBE093003523DE /* JMSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSettingsViewController.m; sourceTree = "<group>"; };
 		C614D8E71AEBE0A8003523DE /* JMMonitoringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMMonitoringViewController.h; sourceTree = "<group>"; };
 		C614D8E81AEBE0A8003523DE /* JMMonitoringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMMonitoringViewController.m; sourceTree = "<group>"; };
 		C614D8EA1AEBE7B1003523DE /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		C614D8EE1AEBE81A003523DE /* MEMELib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MEMELib.framework; sourceTree = "<group>"; };
 		C614D8F61AEBF8FE003523DE /* hakusyu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hakusyu.mp3; sourceTree = "<group>"; };
 		C614D8F81AEBFB86003523DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C614D8FA1AEC008F003523DE /* MEME.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEME.h; sourceTree = "<group>"; };
+		C614D8FB1AEC008F003523DE /* MEME.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEME.m; sourceTree = "<group>"; };
+		C6BF132A1AEC0A4E006700D5 /* JMInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMInitialViewController.h; sourceTree = "<group>"; };
+		C6BF132B1AEC0A4E006700D5 /* JMInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMInitialViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,16 +115,15 @@
 		C614D8B11AEBD336003523DE /* JMHTeamC */ = {
 			isa = PBXGroup;
 			children = (
+				C6BF132D1AEC0B27006700D5 /* Model */,
+				C6BF132F1AEC0B37006700D5 /* View */,
+				C6BF132E1AEC0B2D006700D5 /* ViewController */,
 				C614D8B61AEBD336003523DE /* AppDelegate.h */,
 				C614D8B71AEBD336003523DE /* AppDelegate.m */,
-				C614D8E41AEBE093003523DE /* JMSettingsViewController.h */,
-				C614D8E51AEBE093003523DE /* JMSettingsViewController.m */,
-				C614D8E71AEBE0A8003523DE /* JMMonitoringViewController.h */,
-				C614D8E81AEBE0A8003523DE /* JMMonitoringViewController.m */,
 				C614D8BC1AEBD336003523DE /* Main.storyboard */,
 				C614D8BF1AEBD336003523DE /* Images.xcassets */,
 				C614D8C11AEBD336003523DE /* LaunchScreen.xib */,
-				C614D8F51AEBF8D3003523DE /* Resources */,
+				C614D8F51AEBF8D3003523DE /* Resource */,
 				C614D8B21AEBD336003523DE /* Supporting Files */,
 			);
 			path = JMHTeamC;
@@ -153,12 +155,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C614D8F51AEBF8D3003523DE /* Resources */ = {
+		C614D8F51AEBF8D3003523DE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				C614D8F61AEBF8FE003523DE /* hakusyu.mp3 */,
 			);
-			name = Resources;
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		C6BF132D1AEC0B27006700D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C614D8FA1AEC008F003523DE /* MEME.h */,
+				C614D8FB1AEC008F003523DE /* MEME.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6BF132E1AEC0B2D006700D5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C6BF132A1AEC0A4E006700D5 /* JMInitialViewController.h */,
+				C6BF132B1AEC0A4E006700D5 /* JMInitialViewController.m */,
+				C614D8E71AEBE0A8003523DE /* JMMonitoringViewController.h */,
+				C614D8E81AEBE0A8003523DE /* JMMonitoringViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		C6BF132F1AEC0B37006700D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C614D8E61AEBE093003523DE /* JMSettingsViewController.m in Sources */,
+				C6BF132C1AEC0A4E006700D5 /* JMInitialViewController.m in Sources */,
+				C614D8FC1AEC008F003523DE /* MEME.m in Sources */,
 				C614D8E91AEBE0A8003523DE /* JMMonitoringViewController.m in Sources */,
 				C614D8B81AEBD336003523DE /* AppDelegate.m in Sources */,
 				C614D8B51AEBD336003523DE /* main.m in Sources */,

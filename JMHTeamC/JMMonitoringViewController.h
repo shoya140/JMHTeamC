@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MEMELib/MEMELib.h>
+#import "MEME.h"
 
-@interface JMMonitoringViewController : UIViewController
-
-- (void)memeRealTimeModeDataReceived: (MEMERealTimeData *)data;
+@interface JMMonitoringViewController : UIViewController<MEMEDelegate>
 
 @end
