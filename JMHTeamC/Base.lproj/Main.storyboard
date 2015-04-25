@@ -32,31 +32,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du3-Mk-DFG">
-                                <rect key="frame" x="276" y="430" width="50" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du3-Mk-DFG" customClass="FUIButton">
+                                <rect key="frame" x="180" y="410" width="240" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="MZt-Hg-Ypa"/>
-                                    <constraint firstAttribute="height" constant="40" id="dd8-JU-6H4"/>
+                                    <constraint firstAttribute="width" constant="240" id="MZt-Hg-Ypa"/>
+                                    <constraint firstAttribute="height" constant="50" id="dd8-JU-6H4"/>
                                 </constraints>
-                                <state key="normal" title="Start">
+                                <state key="normal" title="会議を始める">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="startButtonWasPressed:" destination="TEI-P5-SGg" eventType="touchUpInside" id="jRl-SG-NRL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06Y-Ll-NZe" customClass="FUIButton">
+                                <rect key="frame" x="180" y="470" width="240" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="EFH-IS-j9j"/>
+                                    <constraint firstAttribute="height" constant="50" id="aVy-ok-NVO"/>
+                                </constraints>
+                                <state key="normal" title="設定">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Q87-NT-W4D" kind="modal" modalTransitionStyle="flipHorizontal" id="Uwo-cR-2YB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="z5I-30-AbH" firstAttribute="top" secondItem="du3-Mk-DFG" secondAttribute="bottom" constant="130" id="kN9-fl-7ZX"/>
+                            <constraint firstItem="z5I-30-AbH" firstAttribute="top" secondItem="06Y-Ll-NZe" secondAttribute="bottom" constant="80" id="U1t-nI-DIv"/>
+                            <constraint firstAttribute="centerX" secondItem="06Y-Ll-NZe" secondAttribute="centerX" id="f4N-Ky-iQh"/>
+                            <constraint firstItem="z5I-30-AbH" firstAttribute="top" secondItem="du3-Mk-DFG" secondAttribute="bottom" constant="140" id="kN9-fl-7ZX"/>
                             <constraint firstAttribute="centerX" secondItem="du3-Mk-DFG" secondAttribute="centerX" id="zFD-xY-PQ0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9US-xD-Z3o"/>
+                    <connections>
+                        <outlet property="settingsButton" destination="06Y-Ll-NZe" id="xeB-pa-Jnb"/>
+                        <outlet property="startButton" destination="du3-Mk-DFG" id="Xt7-24-bfy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34T-VF-Bby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="587" y="888"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lK1-Wj-RJY">
+            <objects>
+                <navigationController id="Q87-NT-W4D" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gxM-0P-GlI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6G9-Qx-gjq" kind="relationship" relationship="rootViewController" id="hXI-tG-xgN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfP-P0-HMC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="587" y="1606"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="NY7-UX-fz3">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sjf-UG-PzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="JMSettingsViewController" id="6G9-Qx-gjq" customClass="JMSettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="emG-tA-faP"/>
+                        <viewControllerLayoutGuide type="bottom" id="ceD-4f-Nqb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="29y-VN-A42">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="設定" id="Pl3-h5-5sj">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="Si5-jC-Ndb">
+                            <connections>
+                                <segue destination="TEI-P5-SGg" kind="modal" modalTransitionStyle="flipHorizontal" id="WZp-1c-vXF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1294" y="1606"/>
         </scene>
         <!--Monitoring View Controller-->
         <scene sceneID="1ro-1w-IuR">
@@ -77,4 +137,7 @@
             <point key="canvasLocation" x="1294.5" y="890"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WZp-1c-vXF"/>
+    </inferredMetricsTieBreakers>
 </document>

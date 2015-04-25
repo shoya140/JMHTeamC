@@ -1,0 +1,13 @@
+PODS:
+  - FlatUIKit (1.6)
+  - SVProgressHUD (1.1.3)
+
+DEPENDENCIES:
+  - FlatUIKit
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  FlatUIKit: a59c93fe2fde5329dfb71dd9317b1b0386d6a178
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+
+COCOAPODS: 0.36.4

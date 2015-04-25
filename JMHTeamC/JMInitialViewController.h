@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FlatUIKit.h"
+
 #import "MEME.h"
 
 @interface JMInitialViewController : UIViewController<MEMEDelegate>
+@property (weak, nonatomic) IBOutlet FUIButton *startButton;
+@property (weak, nonatomic) IBOutlet FUIButton *settingsButton;
 
 @end
