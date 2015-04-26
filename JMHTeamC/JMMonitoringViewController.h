@@ -11,5 +11,8 @@
 
 @interface JMMonitoringViewController : UIViewController<MEMEDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *debugLabel;
+@property (weak, nonatomic) IBOutlet UILabel *noddingDebugLabel;
+@property (weak, nonatomic) IBOutlet UILabel *focusDebugLabel;
+@property (weak, nonatomic) IBOutlet UILabel *sleepyDebugLabel;
 
 @end

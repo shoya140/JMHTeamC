@@ -28,17 +28,22 @@ typedef NS_ENUM (NSUInteger, kSleepy) {
     kSleepyLow
 };
 
+typedef NS_ENUM (NSUInteger, kNodding) {
+    kYES,
+    kNO
+};
+
 @interface JMMonitoringViewController (){
     SystemSoundID _hakusyuSound;
     NSMutableArray *_pitchValues;
     NSMutableArray *_blinkFrequencies;
     NSMutableArray *_blinkSpeeds;
-    BOOL _isNodding;
     BOOL _isDetectingFocus;
     BOOL _isDetectingSleepy;
     double _lastBlinkTimeStamp;
     kFocus _focusStatus;
     kSleepy _sleepyStatus;
+    kNodding _noddingStatus;
 }
 
 @end
@@ -51,7 +56,7 @@ typedef NS_ENUM (NSUInteger, kSleepy) {
     [MEME sharedManager].delegate = self;
     
     _blinkFrequencies = [NSMutableArray array];
-    _isNodding = NO;
+    _noddingStatus = kNO;
     
     _pitchValues = [NSMutableArray array];
     _lastBlinkTimeStamp = [[NSDate date] timeIntervalSince1970];
@@ -60,7 +65,7 @@ typedef NS_ENUM (NSUInteger, kSleepy) {
     
     _blinkSpeeds = [NSMutableArray array];
     _isDetectingSleepy = NO;
-    _sleepyStatus = kFocusMediam;
+    _sleepyStatus = kSleepyMediam;
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"hakusyu" ofType:@"mp3"];
     NSURL *url = [NSURL fileURLWithPath:path];
@@ -78,7 +83,7 @@ typedef NS_ENUM (NSUInteger, kSleepy) {
 
 - (void)resetNodding:(NSTimer *)timer
 {
-    _isNodding = NO;
+    _noddingStatus = NO;
 }
 
 - (void)noddingDetection:(MEMERealTimeData *)data
@@ -90,9 +95,9 @@ typedef NS_ENUM (NSUInteger, kSleepy) {
     [_pitchValues removeLastObject];
     
     float var = [self calcVariance:_pitchValues];
-    if (!_isNodding && var > 6.0) {
+    if (_noddingStatus == kNO && var > 6.0) {
         AudioServicesPlaySystemSound(_hakusyuSound);
-        _isNodding = YES;
+        _noddingStatus = kYES;
         NSTimer *resetTimer = [NSTimer scheduledTimerWithTimeInterval:10.0f target:self selector:@selector(resetNodding:) userInfo:nil repeats:NO];
     }
 }
@@ -160,17 +165,50 @@ typedef NS_ENUM (NSUInteger, kSleepy) {
 
 - (void)memeRealTimeModeDataReceived:(MEMERealTimeData *)data
 {
-    self.debugLabel.text = [NSString stringWithFormat:@"blink:%d", data.blinkStrength];
+    self.debugLabel.text = [NSString stringWithFormat:@"pitch:%d", data.blinkStrength];
     [self noddingDetection:data];
     [self focusDetection:data];
     [self sleepyDetection:data];
     
-    if (_isDetectingSleepy) {
-        NSLog(@"sleepy:%lu", (unsigned long)_sleepyStatus);
+    switch (_noddingStatus) {
+        case kYES:
+            self.noddingDebugLabel.text = @"nodding:Yes";
+            break;
+        case kNO:
+            self.noddingDebugLabel.text = @"nodding:No";
+        default:
+            break;
     }
     
-    if (_isDetectingFocus){
-        NSLog(@"focus:%lu", (unsigned long)_focusStatus);
+    if (_isDetectingSleepy && _isDetectingFocus) {
+        
+        switch (_focusStatus) {
+            case kFocusHigh:
+                self.focusDebugLabel.text = @"focus:High";
+                break;
+            case kFocusMediam:
+                self.focusDebugLabel.text = @"focus:Medium";
+                break;
+            case kFocusLow:
+                self.focusDebugLabel.text = @"focus:Low";
+                break;
+            default:
+                break;
+        }
+        
+        switch (_sleepyStatus) {
+            case kSleepyHigh:
+                self.sleepyDebugLabel.text = @"sleepy:High";
+                break;
+            case kSleepyMediam:
+                self.sleepyDebugLabel.text = @"sleepy:Medium";
+                break;
+            case kSleepyLow:
+                self.sleepyDebugLabel.text = @"sleepy:Low";
+                break;
+            default:
+                break;
+        }
     }
 }
 
