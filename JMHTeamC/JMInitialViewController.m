@@ -58,4 +58,9 @@
     [self.navigationController pushViewController:monitoringVC animated:YES];
 }
 
+- (void)memeRealTimeModeDataReceived:(MEMERealTimeData *)data
+{
+    
+}
+
 @end

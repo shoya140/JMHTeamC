@@ -61,7 +61,7 @@ static MEME *sharedData = nil;
     NSLog(@"peripheral found %@", uuid);
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     if ([uuid isEqualToString:[ud stringForKey:@"uuid"]]) {
-        MEMEStatus status = [[MEMELib sharedInstance] connectPeripheral: peripheral ];
+        MEMEStatus status = [[MEMELib sharedInstance] connectPeripheral: peripheral];
         [self checkMEMEStatus: status];
     }
 }

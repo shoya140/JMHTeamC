@@ -102,6 +102,7 @@
                         <viewControllerLayoutGuide type="bottom" id="MU8-nF-9Py"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Zuk-9f-7HZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="B968E642-B74E-12BC-571D-C550B75375AD" borderStyle="roundedRect" placeholder="B968E642-B74E-12BC-571D-C550B75375AD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDl-r4-BsE">
@@ -177,16 +178,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="pitch: 0.00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6R-fw-DrY">
-                                <rect key="frame" x="250" y="122" width="100" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="N7E-Cf-czh"/>
-                                    <constraint firstAttribute="width" constant="100" id="aE5-C4-WPF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="analyzing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnF-29-nXj">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -253,16 +244,21 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jmG-9B-weF">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="23E-ow-tlQ" secondAttribute="centerX" id="1GX-cc-gFJ"/>
-                            <constraint firstItem="I6R-fw-DrY" firstAttribute="top" secondItem="jub-uj-QG9" secondAttribute="bottom" constant="102" id="LUM-b5-bhG"/>
+                            <constraint firstItem="zHZ-MN-x3V" firstAttribute="top" secondItem="jmG-9B-weF" secondAttribute="bottom" id="C20-G5-uHa"/>
                             <constraint firstItem="23E-ow-tlQ" firstAttribute="centerY" secondItem="CnF-29-nXj" secondAttribute="centerY" id="MCG-nV-jxU"/>
+                            <constraint firstItem="jmG-9B-weF" firstAttribute="leading" secondItem="gOi-9b-bDR" secondAttribute="leading" id="MT0-gz-dSh"/>
                             <constraint firstItem="23E-ow-tlQ" firstAttribute="leading" secondItem="CnF-29-nXj" secondAttribute="trailing" constant="20" id="NyQ-ig-tOR"/>
-                            <constraint firstAttribute="centerX" secondItem="I6R-fw-DrY" secondAttribute="centerX" id="QKd-0o-6na"/>
                             <constraint firstItem="zHZ-MN-x3V" firstAttribute="top" secondItem="23E-ow-tlQ" secondAttribute="bottom" constant="20" id="Umb-FQ-epT"/>
+                            <constraint firstAttribute="trailing" secondItem="jmG-9B-weF" secondAttribute="trailing" id="XbE-wX-xts"/>
                             <constraint firstItem="23E-ow-tlQ" firstAttribute="centerY" secondItem="PxM-f1-bz6" secondAttribute="centerY" id="hNG-Xv-Erb"/>
+                            <constraint firstItem="jmG-9B-weF" firstAttribute="top" secondItem="jub-uj-QG9" secondAttribute="bottom" id="jhE-ee-oi6"/>
                             <constraint firstItem="zHZ-MN-x3V" firstAttribute="top" secondItem="23E-ow-tlQ" secondAttribute="bottom" constant="20" id="pP6-wA-3W7"/>
                             <constraint firstItem="PxM-f1-bz6" firstAttribute="leading" secondItem="23E-ow-tlQ" secondAttribute="trailing" constant="20" id="yt3-72-JZz"/>
                         </constraints>
@@ -271,12 +267,17 @@
                                 <exclude reference="CnF-29-nXj"/>
                                 <exclude reference="23E-ow-tlQ"/>
                                 <exclude reference="PxM-f1-bz6"/>
+                                <exclude reference="jmG-9B-weF"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="MT0-gz-dSh"/>
+                                <exclude reference="XbE-wX-xts"/>
+                                <exclude reference="jhE-ee-oi6"/>
                                 <exclude reference="1GX-cc-gFJ"/>
                                 <exclude reference="MCG-nV-jxU"/>
                                 <exclude reference="NyQ-ig-tOR"/>
                                 <exclude reference="hNG-Xv-Erb"/>
+                                <exclude reference="C20-G5-uHa"/>
                                 <exclude reference="Umb-FQ-epT"/>
                                 <exclude reference="pP6-wA-3W7"/>
                                 <exclude reference="yt3-72-JZz"/>
@@ -287,12 +288,17 @@
                                 <include reference="CnF-29-nXj"/>
                                 <include reference="23E-ow-tlQ"/>
                                 <include reference="PxM-f1-bz6"/>
+                                <include reference="jmG-9B-weF"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="MT0-gz-dSh"/>
+                                <include reference="XbE-wX-xts"/>
+                                <include reference="jhE-ee-oi6"/>
                                 <include reference="1GX-cc-gFJ"/>
                                 <include reference="MCG-nV-jxU"/>
                                 <include reference="NyQ-ig-tOR"/>
                                 <include reference="hNG-Xv-Erb"/>
+                                <include reference="C20-G5-uHa"/>
                                 <include reference="Umb-FQ-epT"/>
                                 <include reference="pP6-wA-3W7"/>
                                 <include reference="yt3-72-JZz"/>
@@ -300,10 +306,10 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="debugLabel" destination="I6R-fw-DrY" id="rI4-rF-CwH"/>
                         <outlet property="focusDebugLabel" destination="23E-ow-tlQ" id="U9V-MX-p4u"/>
                         <outlet property="noddingDebugLabel" destination="CnF-29-nXj" id="Sbr-rL-cQ1"/>
                         <outlet property="sleepyDebugLabel" destination="PxM-f1-bz6" id="EXb-Pw-5IX"/>
+                        <outlet property="statusImageView" destination="jmG-9B-weF" id="50Y-Q6-Lhr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzv-IF-3id" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -16,6 +16,9 @@
 #define THRESHOLD_SLEEP_BLINK_SPEED_HIGH 80
 #define THRESHOLD_SLEEP_BLINK_SPEED_MEDIDUM 140
 
+#define THRESHOLD_PITCH_VARIANCE 6.0
+#define THRESHOLD_PITCH_DISTANCE 30
+
 typedef NS_ENUM (NSUInteger, kFocus) {
     kFocusHigh,
     kFocusMediam,
@@ -83,7 +86,7 @@ typedef NS_ENUM (NSUInteger, kNodding) {
 
 - (void)resetNodding:(NSTimer *)timer
 {
-    _noddingStatus = NO;
+    _noddingStatus = kNO;
 }
 
 - (void)noddingDetection:(MEMERealTimeData *)data
@@ -95,7 +98,7 @@ typedef NS_ENUM (NSUInteger, kNodding) {
     [_pitchValues removeLastObject];
     
     float var = [self calcVariance:_pitchValues];
-    if (_noddingStatus == kNO && var > 6.0) {
+    if (_noddingStatus == kNO && var > THRESHOLD_PITCH_VARIANCE && [_pitchValues[15] floatValue] - [_pitchValues[16] floatValue] > THRESHOLD_PITCH_DISTANCE) {
         AudioServicesPlaySystemSound(_hakusyuSound);
         _noddingStatus = kYES;
         NSTimer *resetTimer = [NSTimer scheduledTimerWithTimeInterval:10.0f target:self selector:@selector(resetNodding:) userInfo:nil repeats:NO];
@@ -165,7 +168,6 @@ typedef NS_ENUM (NSUInteger, kNodding) {
 
 - (void)memeRealTimeModeDataReceived:(MEMERealTimeData *)data
 {
-    self.debugLabel.text = [NSString stringWithFormat:@"pitch:%d", data.blinkStrength];
     [self noddingDetection:data];
     [self focusDetection:data];
     [self sleepyDetection:data];
