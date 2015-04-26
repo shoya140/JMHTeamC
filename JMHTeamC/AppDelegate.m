@@ -10,7 +10,7 @@
 #import "FlatUIKit.h"
 #import <MEMELib/MEMELib.h>
 
-#define MEME_UUID @"B968E642-B74E-12BC-571D-C550B75375AD"
+#define MEME_UUID @"351FA731-44E3-9B0D-0826-714BA717A4F9"
 
 @interface AppDelegate ()
 

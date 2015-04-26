@@ -16,8 +16,7 @@
 #define THRESHOLD_SLEEP_BLINK_SPEED_HIGH 80
 #define THRESHOLD_SLEEP_BLINK_SPEED_MEDIDUM 140
 
-#define THRESHOLD_PITCH_VARIANCE 6.0
-#define THRESHOLD_PITCH_DISTANCE 30
+#define THRESHOLD_PITCH_VARIANCE 5.0
 
 typedef NS_ENUM (NSUInteger, kFocus) {
     kFocusHigh,
@@ -98,7 +97,7 @@ typedef NS_ENUM (NSUInteger, kNodding) {
     [_pitchValues removeLastObject];
     
     float var = [self calcVariance:_pitchValues];
-    if (_noddingStatus == kNO && var > THRESHOLD_PITCH_VARIANCE && [_pitchValues[15] floatValue] - [_pitchValues[16] floatValue] > THRESHOLD_PITCH_DISTANCE) {
+    if (_noddingStatus == kNO && var > THRESHOLD_PITCH_VARIANCE) {
         AudioServicesPlaySystemSound(_hakusyuSound);
         _noddingStatus = kYES;
         NSTimer *resetTimer = [NSTimer scheduledTimerWithTimeInterval:10.0f target:self selector:@selector(resetNodding:) userInfo:nil repeats:NO];
@@ -168,6 +167,8 @@ typedef NS_ENUM (NSUInteger, kNodding) {
 
 - (void)memeRealTimeModeDataReceived:(MEMERealTimeData *)data
 {
+    NSLog(@"%f",data.pitch);
+    
     [self noddingDetection:data];
     [self focusDetection:data];
     [self sleepyDetection:data];
@@ -190,7 +191,7 @@ typedef NS_ENUM (NSUInteger, kNodding) {
                 self.focusDebugLabel.text = @"focus:High";
                 break;
             case kFocusMediam:
-                self.focusDebugLabel.text = @"focus:Medium";
+                self.focusDebugLabel.text = @"focus:Med";
                 break;
             case kFocusLow:
                 self.focusDebugLabel.text = @"focus:Low";
@@ -204,7 +205,7 @@ typedef NS_ENUM (NSUInteger, kNodding) {
                 self.sleepyDebugLabel.text = @"sleepy:High";
                 break;
             case kSleepyMediam:
-                self.sleepyDebugLabel.text = @"sleepy:Medium";
+                self.sleepyDebugLabel.text = @"sleepy:Med";
                 break;
             case kSleepyLow:
                 self.sleepyDebugLabel.text = @"sleepy:Low";
