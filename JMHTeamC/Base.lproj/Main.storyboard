@@ -20,7 +20,7 @@
             </objects>
             <point key="canvasLocation" x="-119" y="890"/>
         </scene>
-        <!--Initial View Controller-->
+        <!--あいのてみーむ-->
         <scene sceneID="9Bi-4p-2bJ">
             <objects>
                 <viewController storyboardIdentifier="JMInitialViewController" id="TEI-P5-SGg" customClass="JMInitialViewController" sceneMemberID="viewController">
@@ -67,7 +67,7 @@
                             <constraint firstAttribute="centerX" secondItem="du3-Mk-DFG" secondAttribute="centerX" id="zFD-xY-PQ0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9US-xD-Z3o"/>
+                    <navigationItem key="navigationItem" title="あいのてみーむ" id="9US-xD-Z3o"/>
                     <connections>
                         <outlet property="settingsButton" destination="06Y-Ll-NZe" id="xeB-pa-Jnb"/>
                         <outlet property="startButton" destination="du3-Mk-DFG" id="Xt7-24-bfy"/>
@@ -93,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="630" y="1598"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--設定-->
         <scene sceneID="Dts-1d-hcY">
             <objects>
                 <viewController storyboardIdentifier="JMSettingsViewController" id="ueJ-gq-1Fn" customClass="JMSettingsViewController" sceneMemberID="viewController">
@@ -105,7 +105,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="B968E642-B74E-12BC-571D-C550B75375AD" borderStyle="roundedRect" placeholder="B968E642-B74E-12BC-571D-C550B75375AD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDl-r4-BsE">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="351FA731-44E3-9B0D-0826-714BA717A4F9" borderStyle="roundedRect" placeholder="351FA731-44E3-9B0D-0826-714BA717A4F9" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDl-r4-BsE">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Ac6-gr-ukF"/>
@@ -151,7 +151,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="03A-of-zNb">
+                    <navigationItem key="navigationItem" title="設定" id="03A-of-zNb">
                         <barButtonItem key="leftBarButtonItem" title="Done" id="rLh-NA-2Ey">
                             <connections>
                                 <segue destination="TEI-P5-SGg" kind="modal" modalTransitionStyle="flipHorizontal" id="nzE-bY-rQx"/>
@@ -175,7 +175,7 @@
                         <viewControllerLayoutGuide type="bottom" id="zHZ-MN-x3V"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gOi-9b-bDR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="analyzing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnF-29-nXj">
@@ -244,7 +244,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jmG-9B-weF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meeting.png" translatesAutoresizingMaskIntoConstraints="NO" id="jmG-9B-weF">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
                         </subviews>
@@ -270,17 +270,17 @@
                                 <exclude reference="jmG-9B-weF"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="MT0-gz-dSh"/>
-                                <exclude reference="XbE-wX-xts"/>
-                                <exclude reference="jhE-ee-oi6"/>
                                 <exclude reference="1GX-cc-gFJ"/>
                                 <exclude reference="MCG-nV-jxU"/>
                                 <exclude reference="NyQ-ig-tOR"/>
                                 <exclude reference="hNG-Xv-Erb"/>
+                                <exclude reference="yt3-72-JZz"/>
                                 <exclude reference="C20-G5-uHa"/>
                                 <exclude reference="Umb-FQ-epT"/>
                                 <exclude reference="pP6-wA-3W7"/>
-                                <exclude reference="yt3-72-JZz"/>
+                                <exclude reference="MT0-gz-dSh"/>
+                                <exclude reference="XbE-wX-xts"/>
+                                <exclude reference="jhE-ee-oi6"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -291,20 +291,21 @@
                                 <include reference="jmG-9B-weF"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="MT0-gz-dSh"/>
-                                <include reference="XbE-wX-xts"/>
-                                <include reference="jhE-ee-oi6"/>
                                 <include reference="1GX-cc-gFJ"/>
                                 <include reference="MCG-nV-jxU"/>
                                 <include reference="NyQ-ig-tOR"/>
                                 <include reference="hNG-Xv-Erb"/>
+                                <include reference="yt3-72-JZz"/>
                                 <include reference="C20-G5-uHa"/>
                                 <include reference="Umb-FQ-epT"/>
                                 <include reference="pP6-wA-3W7"/>
-                                <include reference="yt3-72-JZz"/>
+                                <include reference="MT0-gz-dSh"/>
+                                <include reference="XbE-wX-xts"/>
+                                <include reference="jhE-ee-oi6"/>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="focusDebugLabel" destination="23E-ow-tlQ" id="U9V-MX-p4u"/>
                         <outlet property="noddingDebugLabel" destination="CnF-29-nXj" id="Sbr-rL-cQ1"/>
@@ -314,10 +315,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzv-IF-3id" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1294.5" y="890"/>
+            <point key="canvasLocation" x="1283.25" y="923.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="meeting.png" width="781" height="1389"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nzE-bY-rQx"/>
+        <segue reference="j4s-Xj-gBg"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -23,6 +23,17 @@
 		C614D8FC1AEC008F003523DE /* MEME.m in Sources */ = {isa = PBXBuildFile; fileRef = C614D8FB1AEC008F003523DE /* MEME.m */; };
 		C6BF132C1AEC0A4E006700D5 /* JMInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BF132B1AEC0A4E006700D5 /* JMInitialViewController.m */; };
 		C6C77E111AEC7EC800F59A25 /* JMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C77E101AEC7EC800F59A25 /* JMSettingsViewController.m */; };
+		C6C77E131AEC9D2300F59A25 /* bravo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C6C77E121AEC9D2300F59A25 /* bravo.mp3 */; };
+		C6C77E151AEC9D3600F59A25 /* samurai.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C6C77E141AEC9D3600F59A25 /* samurai.mp3 */; };
+		C6C77E181AECA2AA00F59A25 /* city.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C6C77E161AECA2AA00F59A25 /* city.mp3 */; };
+		C6C77E191AECA2AA00F59A25 /* club.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C6C77E171AECA2AA00F59A25 /* club.mp3 */; };
+		C6C77E1B1AECA42A00F59A25 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C77E1A1AECA42A00F59A25 /* AVFoundation.framework */; };
+		C6C77E1E1AECA5C400F59A25 /* SEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C77E1D1AECA5C400F59A25 /* SEManager.m */; };
+		C6C77E341AECB49700F59A25 /* graph@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C77E2F1AECB49700F59A25 /* graph@2x.png */; };
+		C6C77E351AECB49700F59A25 /* meeting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C77E301AECB49700F59A25 /* meeting@2x.png */; };
+		C6C77E361AECB49700F59A25 /* sleepy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C77E311AECB49700F59A25 /* sleepy@2x.png */; };
+		C6C77E371AECB49700F59A25 /* tierd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C77E321AECB49700F59A25 /* tierd@2x.png */; };
+		C6C77E381AECB49700F59A25 /* wonderful@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C77E331AECB49700F59A25 /* wonderful@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +85,18 @@
 		C6BF132B1AEC0A4E006700D5 /* JMInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMInitialViewController.m; sourceTree = "<group>"; };
 		C6C77E0F1AEC7EC800F59A25 /* JMSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSettingsViewController.h; sourceTree = "<group>"; };
 		C6C77E101AEC7EC800F59A25 /* JMSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSettingsViewController.m; sourceTree = "<group>"; };
+		C6C77E121AEC9D2300F59A25 /* bravo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bravo.mp3; sourceTree = "<group>"; };
+		C6C77E141AEC9D3600F59A25 /* samurai.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = samurai.mp3; sourceTree = "<group>"; };
+		C6C77E161AECA2AA00F59A25 /* city.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = city.mp3; sourceTree = "<group>"; };
+		C6C77E171AECA2AA00F59A25 /* club.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = club.mp3; sourceTree = "<group>"; };
+		C6C77E1A1AECA42A00F59A25 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C6C77E1C1AECA5C400F59A25 /* SEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEManager.h; sourceTree = "<group>"; };
+		C6C77E1D1AECA5C400F59A25 /* SEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEManager.m; sourceTree = "<group>"; };
+		C6C77E2F1AECB49700F59A25 /* graph@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graph@2x.png"; sourceTree = "<group>"; };
+		C6C77E301AECB49700F59A25 /* meeting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "meeting@2x.png"; sourceTree = "<group>"; };
+		C6C77E311AECB49700F59A25 /* sleepy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sleepy@2x.png"; sourceTree = "<group>"; };
+		C6C77E321AECB49700F59A25 /* tierd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tierd@2x.png"; sourceTree = "<group>"; };
+		C6C77E331AECB49700F59A25 /* wonderful@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wonderful@2x.png"; sourceTree = "<group>"; };
 		E658F2A6C168C2F2EA463B3D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C77E1B1AECA42A00F59A25 /* AVFoundation.framework in Frameworks */,
 				C614D8F91AEBFB86003523DE /* AudioToolbox.framework in Frameworks */,
 				C614D8EF1AEBE81A003523DE /* MEMELib.framework in Frameworks */,
 				C614D8EB1AEBE7B1003523DE /* CoreBluetooth.framework in Frameworks */,
@@ -102,6 +126,7 @@
 		5323BE4224369B9944E659A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6C77E1A1AECA42A00F59A25 /* AVFoundation.framework */,
 				C614D8F81AEBFB86003523DE /* AudioToolbox.framework */,
 				C614D8EE1AEBE81A003523DE /* MEMELib.framework */,
 				C614D8EA1AEBE7B1003523DE /* CoreBluetooth.framework */,
@@ -185,7 +210,16 @@
 		C614D8F51AEBF8D3003523DE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				C6C77E2F1AECB49700F59A25 /* graph@2x.png */,
+				C6C77E301AECB49700F59A25 /* meeting@2x.png */,
+				C6C77E311AECB49700F59A25 /* sleepy@2x.png */,
+				C6C77E321AECB49700F59A25 /* tierd@2x.png */,
+				C6C77E331AECB49700F59A25 /* wonderful@2x.png */,
+				C6C77E161AECA2AA00F59A25 /* city.mp3 */,
+				C6C77E171AECA2AA00F59A25 /* club.mp3 */,
 				C614D8F61AEBF8FE003523DE /* hakusyu.mp3 */,
+				C6C77E141AEC9D3600F59A25 /* samurai.mp3 */,
+				C6C77E121AEC9D2300F59A25 /* bravo.mp3 */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -195,6 +229,8 @@
 			children = (
 				C614D8FA1AEC008F003523DE /* MEME.h */,
 				C614D8FB1AEC008F003523DE /* MEME.m */,
+				C6C77E1C1AECA5C400F59A25 /* SEManager.h */,
+				C6C77E1D1AECA5C400F59A25 /* SEManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -302,10 +338,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C77E341AECB49700F59A25 /* graph@2x.png in Resources */,
 				C614D8BE1AEBD336003523DE /* Main.storyboard in Resources */,
+				C6C77E151AEC9D3600F59A25 /* samurai.mp3 in Resources */,
+				C6C77E181AECA2AA00F59A25 /* city.mp3 in Resources */,
+				C6C77E371AECB49700F59A25 /* tierd@2x.png in Resources */,
+				C6C77E131AEC9D2300F59A25 /* bravo.mp3 in Resources */,
+				C6C77E381AECB49700F59A25 /* wonderful@2x.png in Resources */,
+				C6C77E191AECA2AA00F59A25 /* club.mp3 in Resources */,
+				C6C77E351AECB49700F59A25 /* meeting@2x.png in Resources */,
 				C614D8C31AEBD336003523DE /* LaunchScreen.xib in Resources */,
 				C614D8C01AEBD336003523DE /* Images.xcassets in Resources */,
 				C614D8F71AEBF8FE003523DE /* hakusyu.mp3 in Resources */,
+				C6C77E361AECB49700F59A25 /* sleepy@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C77E1E1AECA5C400F59A25 /* SEManager.m in Sources */,
 				C6BF132C1AEC0A4E006700D5 /* JMInitialViewController.m in Sources */,
 				C614D8FC1AEC008F003523DE /* MEME.m in Sources */,
 				C6C77E111AEC7EC800F59A25 /* JMSettingsViewController.m in Sources */,

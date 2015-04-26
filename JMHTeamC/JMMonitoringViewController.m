@@ -9,14 +9,16 @@
 #import "JMMonitoringViewController.h"
 
 #import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
+#import "SEManager.h"
 
 #define THRESHOLD_FOCUS_BLINK_FREQUENCY_HIGH 0.1
-#define THRESHOLD_FOCUS_BLINK_FREQUENCY_MEDIUM 0.4
+#define THRESHOLD_FOCUS_BLINK_FREQUENCY_MEDIUM 0.6
 
-#define THRESHOLD_SLEEP_BLINK_SPEED_HIGH 80
-#define THRESHOLD_SLEEP_BLINK_SPEED_MEDIDUM 140
+#define THRESHOLD_SLEEP_BLINK_SPEED_HIGH 100
+#define THRESHOLD_SLEEP_BLINK_SPEED_MEDIDUM 180
 
-#define THRESHOLD_PITCH_VARIANCE 5.0
+#define THRESHOLD_PITCH_VARIANCE 8.0
 
 typedef NS_ENUM (NSUInteger, kFocus) {
     kFocusHigh,
@@ -37,6 +39,8 @@ typedef NS_ENUM (NSUInteger, kNodding) {
 
 @interface JMMonitoringViewController (){
     SystemSoundID _hakusyuSound;
+    SystemSoundID _samuraiSound;
+    SystemSoundID _bravoSound;
     NSMutableArray *_pitchValues;
     NSMutableArray *_blinkFrequencies;
     NSMutableArray *_blinkSpeeds;
@@ -57,10 +61,10 @@ typedef NS_ENUM (NSUInteger, kNodding) {
     
     [MEME sharedManager].delegate = self;
     
-    _blinkFrequencies = [NSMutableArray array];
+    _pitchValues = [NSMutableArray array];
     _noddingStatus = kNO;
     
-    _pitchValues = [NSMutableArray array];
+    _blinkFrequencies = [NSMutableArray array];
     _lastBlinkTimeStamp = [[NSDate date] timeIntervalSince1970];
     _isDetectingFocus = NO;
     _focusStatus = kFocusMediam;
@@ -72,6 +76,16 @@ typedef NS_ENUM (NSUInteger, kNodding) {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"hakusyu" ofType:@"mp3"];
     NSURL *url = [NSURL fileURLWithPath:path];
     AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(url), &_hakusyuSound);
+    
+    path = [[NSBundle mainBundle] pathForResource:@"samurai" ofType:@"mp3"];
+    url = [NSURL fileURLWithPath:path];
+    AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(url), &_samuraiSound);
+    
+    path = [[NSBundle mainBundle] pathForResource:@"bravo" ofType:@"mp3"];
+    url = [NSURL fileURLWithPath:path];
+    AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(url), &_bravoSound);
+    
+    [[SEManager sharedManager] playSound:@"club.mp3"];
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
@@ -98,7 +112,22 @@ typedef NS_ENUM (NSUInteger, kNodding) {
     
     float var = [self calcVariance:_pitchValues];
     if (_noddingStatus == kNO && var > THRESHOLD_PITCH_VARIANCE) {
-        AudioServicesPlaySystemSound(_hakusyuSound);
+        
+        int random = arc4random() % 3;
+        switch (random) {
+            case 0:
+                AudioServicesPlaySystemSound(_hakusyuSound);
+                break;
+            case 1:
+                AudioServicesPlaySystemSound(_samuraiSound);
+                break;
+            case 2:
+                AudioServicesPlaySystemSound(_bravoSound);
+                break;
+            default:
+                break;
+        }
+        
         _noddingStatus = kYES;
         NSTimer *resetTimer = [NSTimer scheduledTimerWithTimeInterval:10.0f target:self selector:@selector(resetNodding:) userInfo:nil repeats:NO];
     }
@@ -169,13 +198,16 @@ typedef NS_ENUM (NSUInteger, kNodding) {
 {
     NSLog(@"%f",data.pitch);
     
-    [self noddingDetection:data];
     [self focusDetection:data];
     [self sleepyDetection:data];
+    [self noddingDetection:data];
+    
+    [self.statusImageView setImage:[UIImage imageNamed:@"meeting"]];
     
     switch (_noddingStatus) {
         case kYES:
             self.noddingDebugLabel.text = @"nodding:Yes";
+            [self.statusImageView setImage:[UIImage imageNamed:@"wonderful"]];
             break;
         case kNO:
             self.noddingDebugLabel.text = @"nodding:No";
@@ -203,6 +235,7 @@ typedef NS_ENUM (NSUInteger, kNodding) {
         switch (_sleepyStatus) {
             case kSleepyHigh:
                 self.sleepyDebugLabel.text = @"sleepy:High";
+                [self.statusImageView setImage:[UIImage imageNamed:@"sleepy"]];
                 break;
             case kSleepyMediam:
                 self.sleepyDebugLabel.text = @"sleepy:Med";
