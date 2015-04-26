@@ -10,7 +10,7 @@
 #import "FlatUIKit.h"
 #import <MEMELib/MEMELib.h>
 
-#define MEME_UUID @"351FA731-44E3-9B0D-0826-714BA717A4F9"
+#define MEME_UUID @"YOUR_MEME_UUID"
 
 @interface AppDelegate ()
 
@@ -21,7 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [MEMELib setAppClientId:@"256619542960697" clientSecret:@"w51duco0hizhamiyapg0apydfbhhe8xh"];
+    [MEMELib setAppClientId:@"YOUR_APP_CLIENT_ID" clientSecret:@"YOUR_APP_CLIENT_SECRET"];
     self.window.tintColor = [UIColor alizarinColor];
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];

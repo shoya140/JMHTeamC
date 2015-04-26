@@ -105,7 +105,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="351FA731-44E3-9B0D-0826-714BA717A4F9" borderStyle="roundedRect" placeholder="351FA731-44E3-9B0D-0826-714BA717A4F9" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDl-r4-BsE">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="YOUR_MEME_UUID" borderStyle="roundedRect" placeholder="MEME UUID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDl-r4-BsE">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Ac6-gr-ukF"/>
@@ -322,6 +322,6 @@
         <image name="meeting.png" width="781" height="1389"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="j4s-Xj-gBg"/>
+        <segue reference="nzE-bY-rQx"/>
     </inferredMetricsTieBreakers>
 </document>
