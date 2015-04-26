@@ -8,8 +8,6 @@
 
 #import "MEME.h"
 
-#define MEME_UUID @"B968E642-B74E-12BC-571D-C550B75375AD"
-
 @implementation MEME
 
 static MEME *sharedData = nil;
@@ -61,7 +59,8 @@ static MEME *sharedData = nil;
 {
     NSString *uuid = [peripheral.identifier UUIDString];
     NSLog(@"peripheral found %@", uuid);
-    if ([uuid isEqualToString:MEME_UUID]) {
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    if ([uuid isEqualToString:[ud stringForKey:@"uuid"]]) {
         MEMEStatus status = [[MEMELib sharedInstance] connectPeripheral: peripheral ];
         [self checkMEMEStatus: status];
     }

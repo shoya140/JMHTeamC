@@ -21,8 +21,8 @@
 		C614D8F71AEBF8FE003523DE /* hakusyu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C614D8F61AEBF8FE003523DE /* hakusyu.mp3 */; };
 		C614D8F91AEBFB86003523DE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C614D8F81AEBFB86003523DE /* AudioToolbox.framework */; };
 		C614D8FC1AEC008F003523DE /* MEME.m in Sources */ = {isa = PBXBuildFile; fileRef = C614D8FB1AEC008F003523DE /* MEME.m */; };
-		C6399CD71AEC54E000789100 /* JMSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6399CD61AEC54E000789100 /* JMSettingsTableViewController.m */; };
 		C6BF132C1AEC0A4E006700D5 /* JMInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BF132B1AEC0A4E006700D5 /* JMInitialViewController.m */; };
+		C6C77E111AEC7EC800F59A25 /* JMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C77E101AEC7EC800F59A25 /* JMSettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,10 +70,10 @@
 		C614D8F81AEBFB86003523DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C614D8FA1AEC008F003523DE /* MEME.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEME.h; sourceTree = "<group>"; };
 		C614D8FB1AEC008F003523DE /* MEME.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEME.m; sourceTree = "<group>"; };
-		C6399CD51AEC54E000789100 /* JMSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSettingsTableViewController.h; sourceTree = "<group>"; };
-		C6399CD61AEC54E000789100 /* JMSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSettingsTableViewController.m; sourceTree = "<group>"; };
 		C6BF132A1AEC0A4E006700D5 /* JMInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMInitialViewController.h; sourceTree = "<group>"; };
 		C6BF132B1AEC0A4E006700D5 /* JMInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMInitialViewController.m; sourceTree = "<group>"; };
+		C6C77E0F1AEC7EC800F59A25 /* JMSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSettingsViewController.h; sourceTree = "<group>"; };
+		C6C77E101AEC7EC800F59A25 /* JMSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSettingsViewController.m; sourceTree = "<group>"; };
 		E658F2A6C168C2F2EA463B3D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -206,8 +206,8 @@
 				C6BF132B1AEC0A4E006700D5 /* JMInitialViewController.m */,
 				C614D8E71AEBE0A8003523DE /* JMMonitoringViewController.h */,
 				C614D8E81AEBE0A8003523DE /* JMMonitoringViewController.m */,
-				C6399CD51AEC54E000789100 /* JMSettingsTableViewController.h */,
-				C6399CD61AEC54E000789100 /* JMSettingsTableViewController.m */,
+				C6C77E0F1AEC7EC800F59A25 /* JMSettingsViewController.h */,
+				C6C77E101AEC7EC800F59A25 /* JMSettingsViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -358,10 +358,10 @@
 			files = (
 				C6BF132C1AEC0A4E006700D5 /* JMInitialViewController.m in Sources */,
 				C614D8FC1AEC008F003523DE /* MEME.m in Sources */,
+				C6C77E111AEC7EC800F59A25 /* JMSettingsViewController.m in Sources */,
 				C614D8E91AEBE0A8003523DE /* JMMonitoringViewController.m in Sources */,
 				C614D8B81AEBD336003523DE /* AppDelegate.m in Sources */,
 				C614D8B51AEBD336003523DE /* main.m in Sources */,
-				C6399CD71AEC54E000789100 /* JMSettingsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

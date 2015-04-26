@@ -89,7 +89,7 @@ typedef NS_ENUM (NSUInteger, kNodding) {
 - (void)noddingDetection:(MEMERealTimeData *)data
 {
     [_pitchValues insertObject:[NSNumber numberWithFloat:data.pitch] atIndex:0];
-    if (_pitchValues.count < 10) {
+    if (_pitchValues.count < 30) {
         return;
     }
     [_pitchValues removeLastObject];
@@ -176,6 +176,7 @@ typedef NS_ENUM (NSUInteger, kNodding) {
             break;
         case kNO:
             self.noddingDebugLabel.text = @"nodding:No";
+            break;
         default:
             break;
     }
