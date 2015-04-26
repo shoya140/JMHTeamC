@@ -1,5 +1,5 @@
 //
-//  JMSettingsViewController.h
+//  JMSettingsTableViewController.h
 //  JMHTeamC
 //
 //  Created by Shoya Ishimaru on 2015/04/26.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JMSettingsViewController : UIViewController
+@interface JMSettingsTableViewController : UITableViewController
 
 @end
